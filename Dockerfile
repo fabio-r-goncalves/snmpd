@@ -10,11 +10,11 @@ RUN apt install -y make
 RUN mkdir /net-snmp
 RUN mkdir /usr/local/etc/snmp
 VOLUME /usr/local/etc/snmp
-ADD ./net-snmp-5.8 /net-snmp
+ADD ./net-snmp-5.8
 RUN apt install -y perl perl-base libperl-dev
-RUN cd /net-snmp && ./configure
-RUN cd /net-snmp && make
-RUN cd /net-snmp && make install
+RUN cd ./configure
+RUN cd make
+RUN cd make install
 RUN ln -s /net-snmp/agent/.libs/libnetsnmpagent.so.35 /usr/lib/libnetsnmpagent.so.35
 RUN ln -s /net-snmp/snmplib/.libs/libnetsnmp.so.35 /usr/lib/libnetsnmp.so.35
 RUN ln -s /net-snmp/agent/.libs/libnetsnmpmibs.so.35 /usr/lib/libnetsnmpmibs.so.35
