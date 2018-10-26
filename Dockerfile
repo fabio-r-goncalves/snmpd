@@ -1,4 +1,4 @@
-FROM ubuntu:18.04
+FROM ubuntu:latest
 EXPOSE 161/udp
 RUN apt update
 RUN apt install -y wget
