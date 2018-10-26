@@ -10,7 +10,7 @@ RUN apt install -y make
 RUN mkdir /net-snmp
 RUN mkdir /usr/local/etc/snmp
 VOLUME /usr/local/etc/snmp
-ADD ./net-snmp-5.8
+ADD ./net-snmp-5.8 /
 RUN apt install -y perl perl-base libperl-dev
 RUN cd ./configure
 RUN cd make
