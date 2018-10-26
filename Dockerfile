@@ -19,4 +19,4 @@ RUN ln -s /net-snmp/agent/.libs/libnetsnmpagent.so.35 /usr/lib/libnetsnmpagent.s
 RUN ln -s /net-snmp/snmplib/.libs/libnetsnmp.so.35 /usr/lib/libnetsnmp.so.35
 RUN ln -s /net-snmp/agent/.libs/libnetsnmpmibs.so.35 /usr/lib/libnetsnmpmibs.so.35
 ADD ./snmpd.conf /usr/local/etc/snmp
-ENTRYPOINT ["snmpd", "-Lo", "-f"]
+ENTRYPOINT ["/usr/local/sbin/snmpd", "-Lo", "-f"]
