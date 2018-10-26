@@ -15,9 +15,9 @@ RUN apt install -y perl perl-base libperl-dev
 RUN ./configure
 RUN make
 RUN make install
-RUN ln -s /net-snmp/agent/.libs/libnetsnmpagent.so.35 /usr/lib/libnetsnmpagent.so.35
-RUN ln -s /net-snmp/snmplib/.libs/libnetsnmp.so.35 /usr/lib/libnetsnmp.so.35
-RUN ln -s /net-snmp/agent/.libs/libnetsnmpmibs.so.35 /usr/lib/libnetsnmpmibs.so.35
+RUN ln -s /agent/.libs/libnetsnmpagent.so.35 /usr/lib/libnetsnmpagent.so.35
+RUN ln -s /snmplib/.libs/libnetsnmp.so.35 /usr/lib/libnetsnmp.so.35
+RUN ln -s /agent/.libs/libnetsnmpmibs.so.35 /usr/lib/libnetsnmpmibs.so.35
 ADD ./snmpd.conf /home
 ADD ./script.sh /
 RUN chmod 777 script.sh
